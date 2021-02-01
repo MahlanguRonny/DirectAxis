@@ -4,14 +4,77 @@
     "C:\\Users\\Ronnie.NOVASTRAT\\source\\repos\\MahlanguRonny\\DirectAxis\\DirectAxis.RaceGame.FrontEnd\\DirectAxis.RaceGame.FrontEnd\\DirectAxis.RaceGame.FrontEnd.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ronnie.NOVASTRAT\\source\\repos\\MahlanguRonny\\DirectAxis\\DirectAxis.RaceGame.FrontEnd\\DirectAxis.RaceGame.FrontEnd\\DirectAxis.RaceGame.FrontEnd.csproj": {
+    "C:\\Users\\Ronnie.NOVASTRAT\\source\\repos\\MahlanguRonny\\DirectAxis\\DirectAxis.RaceGame.DatabaseManager\\DirectAxis.RaceGame.DatabaseManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ronnie.NOVASTRAT\\source\\repos\\MahlanguRonny\\DirectAxis\\DirectAxis.RaceGame.FrontEnd\\DirectAxis.RaceGame.FrontEnd\\DirectAxis.RaceGame.FrontEnd.csproj",
-        "projectName": "DirectAxis.RaceGame.FrontEnd",
-        "projectPath": "C:\\Users\\Ronnie.NOVASTRAT\\source\\repos\\MahlanguRonny\\DirectAxis\\DirectAxis.RaceGame.FrontEnd\\DirectAxis.RaceGame.FrontEnd\\DirectAxis.RaceGame.FrontEnd.csproj",
+        "projectUniqueName": "C:\\Users\\Ronnie.NOVASTRAT\\source\\repos\\MahlanguRonny\\DirectAxis\\DirectAxis.RaceGame.DatabaseManager\\DirectAxis.RaceGame.DatabaseManager.csproj",
+        "projectName": "DirectAxis.RaceGame.DatabaseManager",
+        "projectPath": "C:\\Users\\Ronnie.NOVASTRAT\\source\\repos\\MahlanguRonny\\DirectAxis\\DirectAxis.RaceGame.DatabaseManager\\DirectAxis.RaceGame.DatabaseManager.csproj",
         "packagesPath": "C:\\Users\\Ronnie.NOVASTRAT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ronnie.NOVASTRAT\\source\\repos\\MahlanguRonny\\DirectAxis\\DirectAxis.RaceGame.FrontEnd\\DirectAxis.RaceGame.FrontEnd\\obj\\",
+        "outputPath": "C:\\Users\\Ronnie.NOVASTRAT\\source\\repos\\MahlanguRonny\\DirectAxis\\DirectAxis.RaceGame.DatabaseManager\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Ronnie.NOVASTRAT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/NovaStratTech/_packaging/NovaStratTech/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Ronnie.NOVASTRAT\\source\\repos\\MahlanguRonny\\DirectAxis\\DirectAxis.RaceGame.Data\\DirectAxis.RaceGame.Data.csproj": {
+                "projectPath": "C:\\Users\\Ronnie.NOVASTRAT\\source\\repos\\MahlanguRonny\\DirectAxis\\DirectAxis.RaceGame.Data\\DirectAxis.RaceGame.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Ronnie.NOVASTRAT\\source\\repos\\MahlanguRonny\\DirectAxis\\DirectAxis.RaceGame.Data\\DirectAxis.RaceGame.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ronnie.NOVASTRAT\\source\\repos\\MahlanguRonny\\DirectAxis\\DirectAxis.RaceGame.Data\\DirectAxis.RaceGame.Data.csproj",
+        "projectName": "DirectAxis.RaceGame.Data",
+        "projectPath": "C:\\Users\\Ronnie.NOVASTRAT\\source\\repos\\MahlanguRonny\\DirectAxis\\DirectAxis.RaceGame.Data\\DirectAxis.RaceGame.Data.csproj",
+        "packagesPath": "C:\\Users\\Ronnie.NOVASTRAT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ronnie.NOVASTRAT\\source\\repos\\MahlanguRonny\\DirectAxis\\DirectAxis.RaceGame.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -44,6 +107,113 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Ronnie.NOVASTRAT\\source\\repos\\MahlanguRonny\\DirectAxis\\DirectAxis.RaceGame.FrontEnd\\DirectAxis.RaceGame.FrontEnd\\DirectAxis.RaceGame.FrontEnd.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Ronnie.NOVASTRAT\\source\\repos\\MahlanguRonny\\DirectAxis\\DirectAxis.RaceGame.FrontEnd\\DirectAxis.RaceGame.FrontEnd\\DirectAxis.RaceGame.FrontEnd.csproj",
+        "projectName": "DirectAxis.RaceGame.FrontEnd",
+        "projectPath": "C:\\Users\\Ronnie.NOVASTRAT\\source\\repos\\MahlanguRonny\\DirectAxis\\DirectAxis.RaceGame.FrontEnd\\DirectAxis.RaceGame.FrontEnd\\DirectAxis.RaceGame.FrontEnd.csproj",
+        "packagesPath": "C:\\Users\\Ronnie.NOVASTRAT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ronnie.NOVASTRAT\\source\\repos\\MahlanguRonny\\DirectAxis\\DirectAxis.RaceGame.FrontEnd\\DirectAxis.RaceGame.FrontEnd\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Ronnie.NOVASTRAT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/NovaStratTech/_packaging/NovaStratTech/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Ronnie.NOVASTRAT\\source\\repos\\MahlanguRonny\\DirectAxis\\DirectAxis.RaceGame.DatabaseManager\\DirectAxis.RaceGame.DatabaseManager.csproj": {
+                "projectPath": "C:\\Users\\Ronnie.NOVASTRAT\\source\\repos\\MahlanguRonny\\DirectAxis\\DirectAxis.RaceGame.DatabaseManager\\DirectAxis.RaceGame.DatabaseManager.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.Extensions.Logging": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Console": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

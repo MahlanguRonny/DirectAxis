@@ -1,3 +1,4 @@
+C:\Users\Ronnie.NOVASTRAT\source\repos\MahlanguRonny\DirectAxis\DirectAxis.RaceGame.Data\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Ronnie.NOVASTRAT\source\repos\MahlanguRonny\DirectAxis\DirectAxis.RaceGame.Data\bin\Debug\netcoreapp3.1\DirectAxis.RaceGame.Data.deps.json
 C:\Users\Ronnie.NOVASTRAT\source\repos\MahlanguRonny\DirectAxis\DirectAxis.RaceGame.Data\bin\Debug\netcoreapp3.1\DirectAxis.RaceGame.Data.runtimeconfig.json
 C:\Users\Ronnie.NOVASTRAT\source\repos\MahlanguRonny\DirectAxis\DirectAxis.RaceGame.Data\bin\Debug\netcoreapp3.1\DirectAxis.RaceGame.Data.runtimeconfig.dev.json

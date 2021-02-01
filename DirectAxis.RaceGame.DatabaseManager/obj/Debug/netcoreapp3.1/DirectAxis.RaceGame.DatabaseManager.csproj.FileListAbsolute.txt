@@ -1,0 +1,13 @@
+C:\Users\Ronnie.NOVASTRAT\source\repos\MahlanguRonny\DirectAxis\DirectAxis.RaceGame.DatabaseManager\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\Ronnie.NOVASTRAT\source\repos\MahlanguRonny\DirectAxis\DirectAxis.RaceGame.DatabaseManager\bin\Debug\netcoreapp3.1\DirectAxis.RaceGame.DatabaseManager.deps.json
+C:\Users\Ronnie.NOVASTRAT\source\repos\MahlanguRonny\DirectAxis\DirectAxis.RaceGame.DatabaseManager\bin\Debug\netcoreapp3.1\DirectAxis.RaceGame.DatabaseManager.dll
+C:\Users\Ronnie.NOVASTRAT\source\repos\MahlanguRonny\DirectAxis\DirectAxis.RaceGame.DatabaseManager\bin\Debug\netcoreapp3.1\DirectAxis.RaceGame.DatabaseManager.pdb
+C:\Users\Ronnie.NOVASTRAT\source\repos\MahlanguRonny\DirectAxis\DirectAxis.RaceGame.DatabaseManager\bin\Debug\netcoreapp3.1\DirectAxis.RaceGame.Data.dll
+C:\Users\Ronnie.NOVASTRAT\source\repos\MahlanguRonny\DirectAxis\DirectAxis.RaceGame.DatabaseManager\bin\Debug\netcoreapp3.1\DirectAxis.RaceGame.Data.pdb
+C:\Users\Ronnie.NOVASTRAT\source\repos\MahlanguRonny\DirectAxis\DirectAxis.RaceGame.DatabaseManager\obj\Debug\netcoreapp3.1\DirectAxis.RaceGame.DatabaseManager.csprojAssemblyReference.cache
+C:\Users\Ronnie.NOVASTRAT\source\repos\MahlanguRonny\DirectAxis\DirectAxis.RaceGame.DatabaseManager\obj\Debug\netcoreapp3.1\DirectAxis.RaceGame.DatabaseManager.AssemblyInfoInputs.cache
+C:\Users\Ronnie.NOVASTRAT\source\repos\MahlanguRonny\DirectAxis\DirectAxis.RaceGame.DatabaseManager\obj\Debug\netcoreapp3.1\DirectAxis.RaceGame.DatabaseManager.AssemblyInfo.cs
+C:\Users\Ronnie.NOVASTRAT\source\repos\MahlanguRonny\DirectAxis\DirectAxis.RaceGame.DatabaseManager\obj\Debug\netcoreapp3.1\DirectAxis.RaceGame.DatabaseManager.csproj.CoreCompileInputs.cache
+C:\Users\Ronnie.NOVASTRAT\source\repos\MahlanguRonny\DirectAxis\DirectAxis.RaceGame.DatabaseManager\obj\Debug\netcoreapp3.1\DirectAxis.RaceGame.DatabaseManager.csproj.CopyComplete
+C:\Users\Ronnie.NOVASTRAT\source\repos\MahlanguRonny\DirectAxis\DirectAxis.RaceGame.DatabaseManager\obj\Debug\netcoreapp3.1\DirectAxis.RaceGame.DatabaseManager.dll
+C:\Users\Ronnie.NOVASTRAT\source\repos\MahlanguRonny\DirectAxis\DirectAxis.RaceGame.DatabaseManager\obj\Debug\netcoreapp3.1\DirectAxis.RaceGame.DatabaseManager.pdb
