@@ -1,6 +1,7 @@
 ﻿using DirectAxis.RaceGame.DatabaseManager.ContactsImplementation;
 using DirectAxis.RaceGame.DatabaseManager.Contratcs;
 using DirectAxis.RaceGame.DatabaseManager.DTOs;
+using DirectAxis.RaceGame.FrontEnd.Helpers;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
@@ -62,16 +63,28 @@ namespace DirectAxis.RaceGame.FrontEnd
             var vehicle1Attribute = raceService.GetVehicleAttributes(vehicleType1);
             var vehicle2Attribute = raceService.GetVehicleAttributes(vehicleType2);
 
-            double vehicleOneResult = CalculateRaceResults(1, trackTypes.FirstOrDefault(x => x.Id == trackType).Complexity, vehicle1Attribute);
-            double vehicleTwoResult = CalculateRaceResults(1, trackTypes.FirstOrDefault(x => x.Id == trackType).Complexity, vehicle2Attribute);
+            var chosenRaceType = trackTypes.FirstOrDefault(x => x.Id == trackType).Complexity;
+            double vehicleOneResult = CalculateRaceResults(chosenRaceType, vehicle1Attribute);
+            double vehicleTwoResult = CalculateRaceResults(chosenRaceType, vehicle2Attribute);
 
             Console.WriteLine($"{choseVehicle1.Description} scored: {vehicleOneResult} points and {choseVehicle2.Description} scored {vehicleTwoResult} points");
+            if (vehicleOneResult > vehicleTwoResult)
+            {
+                Console.WriteLine($"{ choseVehicle1.Description} is the winner!!");
+            }
+            else if (vehicleOneResult < vehicleTwoResult)
+            {
+                Console.WriteLine($"{ choseVehicle2.Description} is the winner!!");
+            }
+            else {
+                Console.WriteLine($"It's a draw");
+            }
 
             Console.ReadKey();
             logger.LogDebug("All done!");
         }
 
-        private static double CalculateRaceResults(int vehicleType, string raceComplexity, VehicleAttributeDto vehicleAttributeDto)
+        private static double CalculateRaceResults(string raceComplexity, VehicleAttributeDto vehicleAttributeDto)
         {
             double straightResults = 0;
             double cornerResults = 0;
@@ -79,7 +92,7 @@ namespace DirectAxis.RaceGame.FrontEnd
             var racePoints = raceComplexity.ToCharArray();
             for (int x = 0; x < racePoints.Length; x++)
             {
-                if (char.GetNumericValue(racePoints[x]) == 1)
+                if (char.GetNumericValue(racePoints[x]) == (int)RacePointTypes.Straight)
                 {
                     straightResults += VehicleStraightResults(vehicleAttributeDto);
                 }
