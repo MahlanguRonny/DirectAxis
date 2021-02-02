@@ -78,5 +78,26 @@ namespace DirectAxis.RaceGame.DatabaseManager.ContactsImplementation
 
             return fullVehicleSpecsList;
         }
+
+        public void SaveResults(List<RaceStatisticDto> raceStatisticList)
+        {
+            List<RaceStatistic> raceStatistics = new List<RaceStatistic>();
+            if (raceStatisticList.Count != 0)
+            {
+                foreach (var item in raceStatisticList)
+                {
+                    raceStatistics.Add(new RaceStatistic
+                    {
+                        CarTypeId = item.CarTypeId,
+                        DateRaced = item.DateRaced,
+                        Score = item.Score,
+                        TrackTypeId = item.TrackTypeId
+                    });
+                }
+                _directAxisContext.AddRange(raceStatistics);
+                _directAxisContext.SaveChanges();
+
+            }
+        }
     }
 }

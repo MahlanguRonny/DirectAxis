@@ -5,6 +5,7 @@ using DirectAxis.RaceGame.FrontEnd.Helpers;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace DirectAxis.RaceGame.FrontEnd
@@ -36,7 +37,7 @@ namespace DirectAxis.RaceGame.FrontEnd
             var vehicleSpecList = raceService.GetVehicleSpec();
             Console.WriteLine("Name - Cornering - Breaking - Acceleration - Top Speed");
             foreach (var vehicle in vehicleSpecList)
-            {              
+            {
                 Console.WriteLine($"{vehicle.VehicleName} - {vehicle.Cornering} - {vehicle.Breaking} -{vehicle.Accelaration} - {vehicle.TopSpeed}");
             }
 
@@ -88,10 +89,18 @@ namespace DirectAxis.RaceGame.FrontEnd
             var vehicle3Attribute = raceService.GetVehicleAttributes(vehicleType3);
 
             //get the complexity(corners & straights) of the selected race-track and calulcate the score of each vehicle type on the selected race
+
+            List<RaceStatisticDto> statsList = new List<RaceStatisticDto>();
             var chosenRaceType = trackTypes.FirstOrDefault(x => x.Id == trackType).Complexity;
             double vehicleOneResult = CalculateRaceResults(chosenRaceType, vehicle1Attribute);
+            statsList.Add(new RaceStatisticDto { CarTypeId = vehicleType1, DateRaced = DateTime.Now, Score = (int)vehicleOneResult, TrackTypeId = trackType });
+
             double vehicleTwoResult = CalculateRaceResults(chosenRaceType, vehicle2Attribute);
+            statsList.Add(new RaceStatisticDto { CarTypeId = vehicleType2, DateRaced = DateTime.Now, Score = (int)vehicleTwoResult, TrackTypeId = trackType });
             double vehicleThreeResult = CalculateRaceResults(chosenRaceType, vehicle3Attribute);
+            statsList.Add(new RaceStatisticDto { CarTypeId = vehicleType3, DateRaced = DateTime.Now, Score = (int)vehicleThreeResult, TrackTypeId = trackType });
+
+            raceService.SaveResults(statsList);
 
             Console.ReadKey();
             logger.LogDebug("All done!");
@@ -125,5 +134,5 @@ namespace DirectAxis.RaceGame.FrontEnd
         {
             return vehicleAttributeDto.Cornering + vehicleAttributeDto.Breaking;
         }
-    }
+      }
 }
