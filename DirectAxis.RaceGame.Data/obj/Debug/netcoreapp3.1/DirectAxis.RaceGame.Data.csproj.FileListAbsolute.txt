@@ -10,3 +10,4 @@ C:\Users\Ronnie.NOVASTRAT\source\repos\MahlanguRonny\DirectAxis\DirectAxis.RaceG
 C:\Users\Ronnie.NOVASTRAT\source\repos\MahlanguRonny\DirectAxis\DirectAxis.RaceGame.Data\obj\Debug\netcoreapp3.1\DirectAxis.RaceGame.Data.dll
 C:\Users\Ronnie.NOVASTRAT\source\repos\MahlanguRonny\DirectAxis\DirectAxis.RaceGame.Data\obj\Debug\netcoreapp3.1\DirectAxis.RaceGame.Data.pdb
 C:\Users\Ronnie.NOVASTRAT\source\repos\MahlanguRonny\DirectAxis\DirectAxis.RaceGame.Data\obj\Debug\netcoreapp3.1\DirectAxis.RaceGame.Data.genruntimeconfig.cache
+C:\Users\Ronnie.NOVASTRAT\source\repos\MahlanguRonny\DirectAxis\DirectAxis.RaceGame.Data\obj\Debug\netcoreapp3.1\DirectAxis.RaceGame.Data.csprojAssemblyReference.cache

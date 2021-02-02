@@ -59,8 +59,7 @@ namespace DirectAxis.RaceGame.Data.Models
             {
                 entity.Property(e => e.Complexity)
                     .IsRequired()
-                    .HasMaxLength(10)
-                    .IsFixedLength(true);
+                    .HasMaxLength(50);
             });
 
             OnModelCreatingPartial(modelBuilder);
