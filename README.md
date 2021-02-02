@@ -2,9 +2,9 @@
 Respostiory used to save and track changes and source code the DirectAxis game project
 -----------------------------------------------------------------
 #Database project instruction
-A) Open SQL managament studio and connect to your local server, i.e your IP address or computer name
-B) Right click on the databases and select  "new database" and enter the name of the DB name, preferrably "DirectAxisGame" to be descriptive but can be any name of your choice and click ok
-D) Clone or down load the ZIP folder and extract its content from the provided link
+ Open SQL managament studio and connect to your local server, i.e your IP address or computer name
+ Right click on the databases and select  "new database" and enter the name of the DB name, preferrably "DirectAxisGame" to be descriptive but can be any name of your choice and click ok
+ Clone or down load the ZIP folder and extract its content from the provided link
 D) Locate the solution file inside DirectAxis/DirectAxis.RaceGame.FrontEnd folder, open it in visual studio
 E)Right clck the project name DirectAxis.RaceGame.Database and set it as a start up project
 F)Right click the  very same database project and select "publish" option
