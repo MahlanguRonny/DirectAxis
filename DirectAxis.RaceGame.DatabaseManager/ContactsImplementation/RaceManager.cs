@@ -45,5 +45,38 @@ namespace DirectAxis.RaceGame.DatabaseManager.ContactsImplementation
 
             return vehicleAttributes;
         }
+
+        public List<FullVehicleSpec> GetVehicleSpec()
+        {
+            List<FullVehicleSpec> fullVehicleSpecsList = new List<FullVehicleSpec>();
+            var dataItems = (from va in _directAxisContext.VehicleAttributes
+                             join ca in _directAxisContext.CarTypes on va.VehicleTypeId equals ca.Id
+                             select new
+                             {
+                                 va.Id,
+                                 va.Accelaration,
+                                 va.Breaking,
+                                 va.Cornering,
+                                 ca.Description,
+                                 va.TopSpeed,
+                                 va.VehicleTypeId
+                             }).ToList();
+
+            foreach (var item in dataItems)
+            {
+                fullVehicleSpecsList.Add(new FullVehicleSpec
+                {
+                    Accelaration = item.Accelaration,
+                    Breaking = item.Breaking,
+                    Cornering = item.Cornering,
+                    VehicleName = item.Description,
+                    TopSpeed = item.TopSpeed,
+                    VehicleTypeId = item.VehicleTypeId,
+                    Id = item.Id
+                });
+            }
+
+            return fullVehicleSpecsList;
+        }
     }
 }

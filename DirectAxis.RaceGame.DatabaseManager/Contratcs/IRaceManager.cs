@@ -11,5 +11,6 @@ namespace DirectAxis.RaceGame.DatabaseManager.Contratcs
         List<CarTypeDto> GetCarTypes();
         List<TrackDto> GetAllTrackTypes();
         VehicleAttributeDto GetVehicleAttributes(int id);
+        List<FullVehicleSpec> GetVehicleSpec();
     }
 }

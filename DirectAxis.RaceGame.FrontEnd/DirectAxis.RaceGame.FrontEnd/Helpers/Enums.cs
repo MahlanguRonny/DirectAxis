@@ -9,4 +9,12 @@ namespace DirectAxis.RaceGame.FrontEnd.Helpers
         Corner,
         Straight
     }
+
+    public enum VehicleAttributes
+    {
+        Acceleration = 8,
+        Braking = 3,
+        Cornering = 4,
+        TopSpeed = 9
+    }
 }
