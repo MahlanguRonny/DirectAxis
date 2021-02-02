@@ -30,7 +30,7 @@ namespace DirectAxis.RaceGame.FrontEnd
             var raceService = serviceProvider.GetService<IRaceManager>();
 
             Console.Clear();
-            Console.WriteLine("Please see vehicle descriptions and their attributes then make your 2 choice that will go against ultimate");
+            Console.WriteLine("Please see vehicle descriptions and their attributes then make your 2 choices that will go against each other");
 
             //get all the vehicle types to choose from
             var vehicles = raceService.GetCarTypes();
@@ -47,11 +47,16 @@ namespace DirectAxis.RaceGame.FrontEnd
             var choseVehicle1 = vehicles.FirstOrDefault(x => x.Id == vehicleType1);
             var choseVehicle2 = vehicles.FirstOrDefault(x => x.Id == vehicleType2);
 
+            if (choseVehicle1 == null || choseVehicle1 == null)
+            {
+                Console.WriteLine("One of the chosen vehicle is invalid, please chose the correct options");
+            }
+
             Console.WriteLine($"Race will be between : {choseVehicle1.Description} vs {choseVehicle2.Description}");
             Console.WriteLine("Now choose the type of race the above vehicles will be participating in");
 
+            //get all the track types from the service
             var trackTypes = raceService.GetAllTrackTypes();
-
             foreach (var track in trackTypes)
             {
                 Console.WriteLine($"option: {track.Id} - {track.Complexity}");
@@ -60,9 +65,11 @@ namespace DirectAxis.RaceGame.FrontEnd
             int trackType = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine($"Chosen track types is {trackType} with complexity of {trackTypes.FirstOrDefault(x => x.Id == trackType).Complexity}");
 
+            //get the attributes of the two selected vehicles that will be racing
             var vehicle1Attribute = raceService.GetVehicleAttributes(vehicleType1);
             var vehicle2Attribute = raceService.GetVehicleAttributes(vehicleType2);
 
+            //get the complexity(corners & straights) of the selected race-track and calulcate the score of each vehicle type on the selected race
             var chosenRaceType = trackTypes.FirstOrDefault(x => x.Id == trackType).Complexity;
             double vehicleOneResult = CalculateRaceResults(chosenRaceType, vehicle1Attribute);
             double vehicleTwoResult = CalculateRaceResults(chosenRaceType, vehicle2Attribute);
@@ -76,7 +83,8 @@ namespace DirectAxis.RaceGame.FrontEnd
             {
                 Console.WriteLine($"{ choseVehicle2.Description} is the winner!!");
             }
-            else {
+            else
+            {
                 Console.WriteLine($"It's a draw");
             }
 
