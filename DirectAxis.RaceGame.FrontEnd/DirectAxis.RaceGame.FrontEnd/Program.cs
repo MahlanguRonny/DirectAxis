@@ -88,8 +88,8 @@ namespace DirectAxis.RaceGame.FrontEnd
             var vehicle2Attribute = raceService.GetVehicleAttributes(vehicleType2);
             var vehicle3Attribute = raceService.GetVehicleAttributes(vehicleType3);
 
-            //get the complexity(corners & straights) of the selected race-track and calulcate the score of each vehicle type on the selected race
-
+      
+            //add each result to a list and save the list to the DB rather than calling a db each time a new result is calculated
             List<RaceStatisticDto> statsList = new List<RaceStatisticDto>();
             var chosenRaceType = trackTypes.FirstOrDefault(x => x.Id == trackType).Complexity;
             double vehicleOneResult = CalculateRaceResults(chosenRaceType, vehicle1Attribute);
@@ -102,6 +102,15 @@ namespace DirectAxis.RaceGame.FrontEnd
 
             raceService.SaveResults(statsList);
 
+            Console.WriteLine();
+            Console.WriteLine("See final scores below from highest to lowest");
+            var statsResults = raceService.GetLatestResultStats();
+            foreach (var stat in statsResults)
+            {
+                Console.WriteLine($"{stat.VehicleTypeDescription} - {stat.Score}");
+            }
+
+            
             Console.ReadKey();
             logger.LogDebug("All done!");
         }
@@ -134,5 +143,5 @@ namespace DirectAxis.RaceGame.FrontEnd
         {
             return vehicleAttributeDto.Cornering + vehicleAttributeDto.Breaking;
         }
-      }
+    }
 }

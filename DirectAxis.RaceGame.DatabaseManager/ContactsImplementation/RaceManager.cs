@@ -96,8 +96,21 @@ namespace DirectAxis.RaceGame.DatabaseManager.ContactsImplementation
                 }
                 _directAxisContext.AddRange(raceStatistics);
                 _directAxisContext.SaveChanges();
-
             }
+        }
+
+        public List<StatsResultViewDto> GetLatestResultStats()
+        {
+            var latestStats = (from rs in _directAxisContext.RaceStatistics
+                               join ct in _directAxisContext.CarTypes on rs.CarTypeId equals ct.Id
+                               orderby rs.Score descending
+                               select new StatsResultViewDto
+                               {
+                                   Score = rs.Score,
+                                   VehicleTypeDescription = ct.Description
+                               }).Take(3).ToList();
+
+            return latestStats;
         }
     }
 }
