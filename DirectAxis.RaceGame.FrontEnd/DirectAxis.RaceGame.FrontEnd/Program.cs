@@ -1,5 +1,6 @@
 ﻿using DirectAxis.RaceGame.DatabaseManager.ContactsImplementation;
 using DirectAxis.RaceGame.DatabaseManager.Contratcs;
+using DirectAxis.RaceGame.DatabaseManager.DTOs;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,9 +8,9 @@ using System.Linq;
 
 namespace DirectAxis.RaceGame.FrontEnd
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             //setup our DI
             var serviceProvider = new ServiceCollection()
@@ -57,8 +58,46 @@ namespace DirectAxis.RaceGame.FrontEnd
 
             int trackType = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine($"Chosen track types is {trackType} with complexity of {trackTypes.FirstOrDefault(x => x.Id == trackType).Complexity}");
+
+            var vehicle1Attribute = raceService.GetVehicleAttributes(vehicleType1);
+            var vehicle2Attribute = raceService.GetVehicleAttributes(vehicleType2);
+
+            double vehicleOneResult = CalculateRaceResults(1, trackTypes.FirstOrDefault(x => x.Id == trackType).Complexity, vehicle1Attribute);
+            double vehicleTwoResult = CalculateRaceResults(1, trackTypes.FirstOrDefault(x => x.Id == trackType).Complexity, vehicle2Attribute);
+
+            Console.WriteLine($"{choseVehicle1.Description} scored: {vehicleOneResult} points and {choseVehicle2.Description} scored {vehicleTwoResult} points");
+
             Console.ReadKey();
             logger.LogDebug("All done!");
+        }
+
+        private static double CalculateRaceResults(int vehicleType, string raceComplexity, VehicleAttributeDto vehicleAttributeDto)
+        {
+            double straightResults = 0;
+            double cornerResults = 0;
+
+            var racePoints = raceComplexity.ToCharArray();
+            for (int x = 0; x < racePoints.Length; x++)
+            {
+                if (char.GetNumericValue(racePoints[x]) == 1)
+                {
+                    straightResults += VehicleStraightResults(vehicleAttributeDto);
+                }
+                else
+                {
+                    cornerResults += VehicleCorneringResults(vehicleAttributeDto);
+                }
+            }
+            return straightResults + cornerResults;
+        }
+
+        private static int VehicleStraightResults(VehicleAttributeDto vehicleAttributeDto)
+        {
+            return vehicleAttributeDto.Accelaration + vehicleAttributeDto.TopSpeed;
+        }
+        private static int VehicleCorneringResults(VehicleAttributeDto vehicleAttributeDto)
+        {
+            return vehicleAttributeDto.Cornering + vehicleAttributeDto.Breaking;
         }
     }
 }

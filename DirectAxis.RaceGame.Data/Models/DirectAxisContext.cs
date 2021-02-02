@@ -21,15 +21,16 @@ namespace DirectAxis.RaceGame.Data.Models
         public virtual DbSet<CarType> CarTypes { get; set; }
         public virtual DbSet<RaceStatistic> RaceStatistics { get; set; }
         public virtual DbSet<Track> Tracks { get; set; }
+        public virtual DbSet<VehicleAttribute> VehicleAttributes { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
                 IConfigurationRoot configuration = new ConfigurationBuilder()
-               .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
-               .AddJsonFile("appsettings.json")
-               .Build();
+              .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
+              .AddJsonFile("appsettings.json")
+              .Build();
                 optionsBuilder.UseSqlServer(configuration.GetConnectionString("DbConnection"), builder =>
                 {
                     builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null);

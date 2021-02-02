@@ -29,5 +29,21 @@ namespace DirectAxis.RaceGame.DatabaseManager.ContactsImplementation
                 Complexity = x.Complexity
             }).ToList();
         }
+
+        public VehicleAttributeDto GetVehicleAttributes(int vehicleId)
+        {
+            var vehicleAttributes = new VehicleAttributeDto();
+            var dbModel = _directAxisContext.VehicleAttributes.FirstOrDefault(x => x.VehicleTypeId == vehicleId);
+            if (dbModel != null)
+            {
+
+                vehicleAttributes.Accelaration = dbModel.Accelaration;
+                vehicleAttributes.Breaking = dbModel.Breaking;
+                vehicleAttributes.Cornering = dbModel.Cornering;
+                vehicleAttributes.TopSpeed = dbModel.TopSpeed;
+            }
+
+            return vehicleAttributes;
+        }
     }
 }
