@@ -40,5 +40,5 @@ K) Database project setup is done
 
 A) Open the DirectAxis.RaceGame.FrontEnd poroject in visual studio
 B) Set DirectAxis.RaceGame.FrontEnd project as a start up project
-C) In the Direct.RaceGame.Data there is a appsettings.json file, open it and change the connection string server value to your computer name or IP address or any other server name that was chosen in the point (G) of the database instructions.
+C) In the Direct.RaceGame.Data there is a appsettings.json file, open it and change the connection string "server" value to your computer name or IP address or any other server name that was chosen in the point (G) e.g servername/SQLEXPRESS of the database instructions.
 D) back to the FrontEnd project, run it and have a look at document named Application_Flow.dox document which can be located inside git hub repo
