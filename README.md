@@ -3,16 +3,16 @@ Respostiory used to save and track changes and source code the DirectAxis game p
 
 # Database Instructions #
 -----------------------------------------------------------------
-#Database project instruction
+#Database project instruction #
  Open SQL managament studio and connect to your local server, i.e your IP address or computer name
  -----------------------------------------------------------------
- Right click on the databases and select  "new database" and enter the name of the DB name, preferrably "DirectAxisGame" to be descriptive but can be any name of your choice and click ok
+ A) Right click on the databases and select  "new database" and enter the name of the DB name, preferrably "DirectAxisGame" to be descriptive but can be any name of your choice and  click ok
  -----------------------------------------------------------------
- Clone or down load the ZIP folder and extract its content from the provided link
+B) Clone or down load the ZIP folder and extract its content from the provided link
  -----------------------------------------------------------------
-Locate the solution file inside DirectAxis/DirectAxis.RaceGame.FrontEnd folder, open it in visual studio
+C) Locate the solution file inside DirectAxis/DirectAxis.RaceGame.FrontEnd folder, open it in visual studio
 -----------------------------------------------------------------
-Right clck the project name DirectAxis.RaceGame.Database and set it as a start up project
+D) Right clck the project name DirectAxis.RaceGame.Database and set it as a start up project
 
 F)Right click the  very same database project and select "publish" option
 
@@ -25,6 +25,5 @@ I) On the same window/popup click the dropdown next to the "Database Name" chose
 J) In SQL management studio, right click your newly created DB and select "new query"
 
 K) open the DBScripsts folder from the project repo and copy the content of "Insert Data" script into the opened query and execute
-
-L) Your database part is done
+l
 --------------------------------------------------------------------------------------------------------------------------------------------
